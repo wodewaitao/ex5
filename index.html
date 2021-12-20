@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>杭城亿昔</title>
+	<style type="text/css">
+		.cont{
+			width: 230px;
+			border:1px solid #14324F;
+			overflow: hidden;
+			margin-left:10px;
+			margin-top: 0px;
+			position:fixed;
+		}
+		.cont2
+		{
+			width: 230px;
+			border:1px solid #14324F;
+			overflow: hidden;
+			margin-left:300px;
+			margin-top: 0px;
+			position:fixed;
+			top:1%;
+		}
+		.cont3{
+			width: 230px;
+			border:1px solid #14324F;
+			overflow: hidden;
+			margin-left:600px;
+			margin-top: 0px;
+			position:fixed;
+			top:1%;
+		}
+		.show{
+			width: 230px;
+			height: 242px;
+			position: relative;
+		}
+		#img{
+			width: 230px;
+			height: 242px;
+			position:fixed;
+			top:500px;
+			transition: all 1s ease;
+
+		}
+		#img2{
+			width: 230px;
+			height: 242px;
+			position:fixed;
+			top:500px;
+			left:309px;
+			transition: all 1s ease;
+		
+		}
+		#img3{
+			width: 230px;
+			height: 242px;
+			position:fixed;
+			top:500px;
+			left:609px;
+			transition: all 1s ease;
+		
+		}
+		.wenzi{
+			width: 230px;
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 20px;
+
+		}
+		.hr{
+			width: 80px;
+			margin: 20px  auto;
+			border-color:#14324F;
+		}
+		#img4{
+			left:900px;
+			position:fixed;
+			top:100px;
+			width:350px;
+			height:200px;
+			animation: action 1s infinite linear;
+		}
+		@keyframes action{
+		    25%{
+		        opacity: 0.5;
+		        
+		    }
+		    50%{
+		        opacity:0.1;
+		    }
+		    75%{
+		        opacity:0.5;
+		    }
+		    100%{
+		        opacity:0.9;
+		    }
+		}
+			#content{
+				   top:370px;
+					width: 390px;
+					height: 260px;
+					position: fixed;
+					overflow: hidden;
+				}
+				#content img{
+					position: absolute;
+					width: 390px;
+					cursor: pointer;
+				}
+				#imgOne{
+					left: 0px;
+				}
+				#imgTwo{
+					left:-390px;
+				}
+		
+			
+	</style>
+	<script type="text/javascript">
+		window.onload = move;
+		function move(){
+		document.getElementById("img").style.top="0";
+		document.getElementById("img2").style.top="0";
+		document.getElementById("img3").style.top="0";
+		}
+		
+	
+			function showImg(){
+				document.getElementById('imgOne').style.left="390px";
+				document.getElementById('imgTwo').style.left="0px";
+	
+			}
+	
+			function hideImg(){
+				document.getElementById('imgOne').style.left="0px";
+				document.getElementById('imgTwo').style.left="-390px";
+			}
+			
+	
+	</script>
+</head>
+<body>
+	<div class="cont">
+		<div class="show">
+			<img id="img" src="img/duanqiao.jpg">
+		</div>
+		<div class="wenzi">
+			断桥残雪
+			<hr class="hr">
+			BROKEN BRIDGE
+		</div>
+		</div>
+	<div class="cont2">
+		<div class="show">
+			<img id="img2" src="img/santan.jpg">
+		</div>
+		<div class="wenzi">
+			三潭印月
+			<hr class="hr">
+			SAN TAN
+		</div>
+		</div>
+	<div class="cont3">
+		<div class="show">
+			<img id="img3" src="img/leifneg.jpg">
+		</div>
+		<div class="wenzi">
+			雷峰塔
+			<hr class="hr">
+			LEIFENG PAGODA
+		</div>
+		</div>
+		<img id="img4" src="img/name.jpg">
+		<div id="content" >
+				<img onmousemove="showImg()" id="imgOne" src="img/one.jpg">
+				<img onmouseout="hideImg()" id="imgTwo" src="img/two.jpg">
+			</div>
+		<div class="main">
+			<h1 style="top:390px;left:400px;position:fixed;">古代文化 现代文明</h1>
+			<p style="top:440px;left:400px;position:fixed;">杭州古称临安、钱塘，杭州地处钱塘江下游、东南沿海、浙江北部、京杭大运河南端，
+			杭州自秦朝设县治以来已有2200多年的历史，曾是吴越国和南宋的都城，因风景秀丽，素有“人间天堂”的美誉。</p>
+			<p style="top:480px;left:400px;position:fixed;">随着城市的现代化，西湖文化优美秀丽的风格，也不断表现出现代风范。
+			杭州西湖风景经过现代文化的充实，已更具现代魅力。彩色喷泉、园林雕塑、西湖夜景等形成一道道新的风景线。</p>
+		</div>
+		
+</body>
